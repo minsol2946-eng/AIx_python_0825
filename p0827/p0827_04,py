@@ -1,0 +1,28 @@
+import datetime
+import random
+
+# #현재시간
+# now=datetime.datetime.now()
+# print(now)
+# print(now.year)
+# print(now.month)
+# print(now.day)
+# print(now.hour)
+# print(now.minute)
+# print(now.second)
+
+# print("{}년 {}월 {}일 {}시 {}초".format\
+#       (now.year,now.month,now.day,now.hour,now.minute,now.second))
+#---------------------------------------------------------------------------------------
+
+#1~6월 상반기/ 7~12월 하반기/ 현재 월은 datetime함수를 사용해서 검색한 다음 상반기인지 하반기인지?
+#1.날짜 함수를 사용해서 월을 변수에 저장한 수 2.비교 3.출력
+
+now=datetime.datetime.now()
+month=now.month
+if month>=7:
+ print("{} 월은 하반기 입니다.".format(month))
+else:
+  print("{} 월은 상반기 입니다.".format(month))
+
+  

@@ -36,7 +36,7 @@ a+=2
 length=int(input("반지름을 입력하세요."))
 pi=3.14
 result=pi*(length**2)
-print("반지름: {:.2f}".format(reasult))
+print("반지름: {:.2f}".format(result))
 
 
 #원의 둘레
