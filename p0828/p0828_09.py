@@ -42,6 +42,10 @@
 #     for j in range(1,10):
 #     print("{}X{}={}".format(i,j,i*j))
 
-for i in range(0,10):
-    for j in range(0,10):
-        print((i*10)+j+1,":",j)
+# for i in range(0,10):
+#     for j in range(0,10):
+#         print((i*10)+j+1,":",j)
+
+#번호표 001
+for i range(0,1)
+    for j in range(0,10)
