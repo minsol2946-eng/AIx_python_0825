@@ -10,14 +10,14 @@ while i<6:
         i=i+1
     else:print("중복된 번호 입니다.")
 
-answer=[]
+match=[]
 count=0
 for i in MN:
     if i in lotto:
         count=count+1
-        answer.append(i)
+        match.append(i)
 
 print("Lotto: ",lotto)
 print("My: ",MN)
 print("How many: ",count)
-print("Matched: ",answer)
+print("Matched: ",match)
