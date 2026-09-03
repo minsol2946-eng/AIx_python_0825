@@ -1,4 +1,4 @@
-from gugudan import gugudan_func
+
 
 def gugudan_func():
         for i in range(1,10):
