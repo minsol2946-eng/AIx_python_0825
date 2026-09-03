@@ -29,8 +29,8 @@
 
 
 my_info = {"id":"aaa","pw":"1111",\
-           "money":10_000_000,\
-            "bonusPoint":0}
+        "money":10_000_000,\
+        "bonusPoint":0}
 cart = []
 
 product = [
