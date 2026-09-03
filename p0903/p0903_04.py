@@ -88,3 +88,16 @@ while True:
             print(f"m보너스포인트 : {my_info['bonusPoint']:,}포인트")
         else:
             print("이전화면으로 이동합니다.")
+    elif choice==3:
+        no = int(input("오디오를 구매하시겠습니까?(구매:1,취소:0) "))
+        if no == 1:
+            print("구매완료")
+            # 계산후 결과
+            my_info['money'] -= product[2]['price']
+            # my_info['money'] = my_info['money'] - product[2]['price']
+
+            my_info['bonusPoint'] += product[2]['bonusPoint']
+            print(f"m머니 : {my_info['money']:,}원")
+            print(f"m보너스포인트 : {my_info['bonusPoint']:,}포인트")
+        else:
+            print("이전화면으로 이동합니다.")
