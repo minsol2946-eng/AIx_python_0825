@@ -30,3 +30,5 @@ while True:  #{"prd_name":"컴퓨터","price":1000000}
         p_cal(choice)
     elif choice == 4: # 세탁기 - 1500000
         p_cal(choice)
+
+
