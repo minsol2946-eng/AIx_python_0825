@@ -4,12 +4,7 @@ class Students:
     def add(self,s):
         self.slist.append(s)
 
-    def print(self):
+    def __str__(self):
+        return f"{self.no}\t{self.name}\t{self.kor}\t{self.eng}\t{self.math}\t{self.total}\t{self.avg:.1f}"
 
-stus=Students()
 
-s1=(Students(1,"강아지",100,50,100))
-s2=(Students(2,"고양이",70,90,100))
-
-stus.add(s1)
-stus.add(s2)

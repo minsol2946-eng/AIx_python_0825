@@ -1,3 +1,21 @@
+from student import Student
+from students import Students
+
+# s = Student()
+# s.no=1
+s1=Student(1,"홍길동",100,100,100)
+s2=Student(2,"유관순",100,100,100)
+# print(s1.no,s1.name)
+
+st=Students()
+st.add(s1)
+st.add(s2)
+
+print(st.slist)
+
+
+
+
 # 스튜던트-클래스
 # 홍길동 스튜리스트.어팬드()
 # 유관군 스튜이스트.어팬드()
