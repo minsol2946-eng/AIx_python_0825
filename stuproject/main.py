@@ -1,11 +1,9 @@
-# import p_stu_m as pm
-from p0907.p_stu_m import *
+from student import Student
+from students import Students
+from stuFunc import *
 
 
-
-
-
-# readStu() # 파일불러오기
+readStu() # 파일불러오기
 while True:
     # 0.메인화면함수
     choice = main_screen()
