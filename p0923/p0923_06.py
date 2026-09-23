@@ -1,0 +1,54 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.options import Options
+import requests
+from bs4 import BeautifulSoup
+import time
+import os
+from dotenv import load_dotenv
+
+for i in range(2016,2022):
+    M_URL = f'https://search.daum.net/search?w=tot&q={i}%EB%85%84%EC%98%81%ED%99%94%EC%88%9C%EC%9C%84&DA=MOR&rtmaxcoll=MOR'
+print(M_URL)
+
+# 2. selenium : 자동화 구현
+# 상단 제어창문구 삭제
+# options = Options()
+# options.add_experimental_option("excludeSwitches", ["enable-automation"])
+# options.add_experimental_option("useAutomationExtension", False)
+# options.add_argument("--disable-blink-features=AutomationControlled")
+# browser = webdriver.Chrome(options=options)
+# browser.maximize_window() # 화면 최대창 확대
+# url = M_URL
+# browser.get(url)
+# time.sleep(3)
+
+# # 파일저장
+# soup = BeautifulSoup(browser.page_source,'lxml')
+# for i in range(2016,2022):
+#     with open(f'./p0923/file/movie_{i}.html','w',encoding='utf-8') as f:
+#         f.write(soup.prettify())
+#         time.sleep(2)
+
+for idx in range(2016,2021):
+    with open(f'./p0923/file/movie_{idx}.html','r',encoding='utf-8') as f:
+        soup = BeautifulSoup(f,'lxml')
+
+M_UL=soup.find('ul',{'class':'c-list-basic ty_flow35'})
+LIS=M_UL.find_all('li')
+
+print(f"===== {idx}년 누적 관객별 5위 영화 =====")
+
+for i in range(5):
+    M_IMG=LIS[i].find('img')['src']
+    M_TITLE = LIS[i].find('strong',{'class':'tit-g clamp-g'}).get_text(strip=True)
+    M_DESC = LIS[i].find('p',{'class':'conts-desc clamp-g'}).get_text(strip=True)
+    M_OPENING = LIS[i].find('span',{'class':'conts-subdesc clamp-g'}).get_text(strip=True)
+
+    RANK=i+1
+    print(RANK," 위")
+    print(M_IMG)
+    print(M_TITLE)
+    print(int(M_DESC[3:-2]))
+    print(M_OPENING)
